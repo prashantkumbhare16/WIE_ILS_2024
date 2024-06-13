@@ -2774,10 +2774,10 @@ hr {
 }
 
 .slider-area .hero__caption span {
-    font-size: 18px;
+    font-size: 20px;
     font-family: "Sen", sans-serif;
     font-weight: 600;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     color: #fff;
     display: inline-block;
@@ -2817,7 +2817,7 @@ hr {
 }
 
 .slider-area .hero__caption h1 {
-    font-size: 75px;
+    font-size: 65px;
     font-weight: 800;
     margin-bottom: 14px;
     color: #fff;
