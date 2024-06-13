@@ -3749,7 +3749,7 @@ hr {
 }
 
 .footer-area {
-    background: #441984
+    background: #742F8A;
 }
 
 .footer-area .footer-social2 a:hover {
@@ -3862,7 +3862,8 @@ hr {
 }
 
 .footer-bottom-area {
-    background: #441984;
+    background: #742F8A;
+    border: solid white 2px;
 }
 
 .footer-bottom-area .footer-border {
@@ -3874,7 +3875,7 @@ hr {
     font-weight: 300;
     font-size: 16px;
     line-height: 2;
-    margin-bottom: 12px
+    margin-bottom: 12px;
 }
 
 @media (max-width: 575px) {
@@ -3922,7 +3923,7 @@ hr {
 .footer-bottom-area .footer-social a {
     color: #fff;
     font-size: 14px;
-    padding-left: 25px
+    padding-left: 25px;
 }
 
 .footer-bottom-area .footer-social a i {
