@@ -6872,6 +6872,11 @@ del {
 .padit {
     padding: 8px;
 }
+/* .padit li a{
+    border: solid white 1.49px;
+    padding: 6px;
+    border-radius: 50px;
+} */
 .padit a{
     font-size: 12px;
 }
