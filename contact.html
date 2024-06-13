@@ -1,0 +1,643 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Contact Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style type="text/css">
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        ::selection {
+            background-color: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 100px;
+            background: gray;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #742F8A;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            color: white;
+            position: relative;
+        }
+
+        .nav-logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            background-color: #742F8A;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .nav-links.active {
+            max-height: 300px;
+            /* Adjust as needed */
+            opacity: 1;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 5px;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: white;
+            transition: width 0.2s ease;
+            -webkit-transition: width 0.2s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+            left: 0;
+            background: white;
+        }
+
+        .nav-links .dropdown {
+            position: relative;
+        }
+
+        .nav-links .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateY(-10px);
+            top: 100%;
+            /* Adjusts the position of the dropdown */
+            left: 0;
+            right: 0;
+            margin-top: 10px;
+        }
+
+        .nav-links .dropdown-content.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-links .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-links .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* .nav-links .register a {
+            background-color: white;
+            color: #742F8A;
+            padding: 5px 10px;
+            border: 1px solid white;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        } */
+
+        .nav-links .register a:hover {
+            background-color: #5a2066;
+            color: white;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media (min-width: 769px) {
+            .nav-links {
+                flex-direction: row;
+                position: static;
+                max-height: none;
+                opacity: 1;
+                justify-content: center;
+                right: auto;
+            }
+
+            .nav-logo {
+                margin-right: auto;
+            }
+
+            .navbar {
+                justify-content: space-between;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding-right: 0;
+                /* Remove right padding in mobile view */
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="./assets/img/hero/WIE_logo_purple_RGB_300-removebg-preview.png" alt="loading">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <div class="headerno1">
+            <div style="display: flex;">
+                <div class="padit"><a href="https://ieee.socet.edu.in/">IEEE SOU SB</a></div>
+                <div class="padit"><a href="https://www.silveroakuni.ac.in/">Silver Oak University</a></div>
+            </div>
+            <div style="display: flex;">
+                <div class="padit">
+                    <li><a href="https://www.facebook.com/IEEESilverOakUni/"><i class="fab fa-facebook-f"></i></a></li>
+                </div>
+                <div class="padit">
+                    <li><a href="https://www.instagram.com/ieee_silveroakuni/"><i class="fab fa-instagram"></i></a></li>
+                </div>
+                <div class="padit">
+                    <li><a href="https://www.youtube.com/channel/UC09ml-6jftXhauyPGDccWWg"><i
+                                class="fab fa-youtube"></i></a></li>
+                </div>
+            </div>
+            <div>
+                <img src="https://ieeewie.wpenginepowered.com/wp-content/uploads/IEEE-Logo-wht-250-200x59.png"
+                    id="ieee-logo-from-website">
+            </div>
+        </div>
+
+        <div class="row nav2forimages m-0 p-2">
+            <div class="col-lg-4">
+
+                <img src="./assets/img/hero/logo2.png" class="img-fluid ">
+            </div>
+
+        </div>
+
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <div class="nav-links" id="navLinks">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="about.html">About Us</a></div>
+                <div><a href="spakers.html">About the Speakers</a></div>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Schedule</a>
+                    <div class="dropdown-content">
+                        <a href="#">Day 1</a>
+                        <a href="#">Day 2</a>
+                    </div>
+                </div>
+                <div><a href="contact.html">Contact</a></div>
+                <div><a href="#">Sponsors</a></div>
+                <div class="register"><a href="#">Register Now</a></div>
+            </div>
+        </nav>
+
+        <script>
+            function toggleMenu() {
+                const navLinks = document.getElementById('navLinks');
+                navLinks.classList.toggle('active');
+            }
+
+            document.querySelectorAll('.dropbtn').forEach(btn => {
+                btn.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const dropdownContent = btn.nextElementSibling;
+                    dropdownContent.classList.toggle('show');
+                });
+            });
+        </script>
+
+        <style>
+            /* Dropdown button */
+            .dropbtn {
+                color: white;
+                font-size: 15px;
+                background-color: inherit;
+                border: none;
+            }
+
+            /* Dropdown container */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            /* Dropdown content (hidden by default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #742F8A;
+                min-width: 160px;
+                z-index: 1;
+            }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown:hover .dropbtn {
+                background-color: #742F8A;
+            }
+        </style>
+
+
+
+        <nav class="nav-manus-a" style="background-color: #742F8A;">
+
+        </nav>
+        <!-- Mobile Menu -->
+        <div class="col-12">
+            <div class="mobile_menu d-block d-lg-none"></div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- Header End -->
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.dropbtn').forEach(btn => {
+            btn.addEventListener('click', (event) => {
+                event.preventDefault();
+                const dropdownContent = btn.nextElementSibling;
+                dropdownContent.classList.toggle('show');
+            });
+        });
+    </script>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 text-center">
+                                <h2>Contact Us</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+        <!-- ================ contact section start ================= -->
+        <section class="contact-section">
+            <div class="container mb-80">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29361.483855393195!2d72.534638!3d23.090305!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e833af6f39347%3A0xf1db9065daea7008!2sSilver%20Oak%20University!5e0!3m2!1sen!2sin!4v1717154573748!5m2!1sen!2sin"
+                        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <script>
+                function initMap() {
+                    var newLocation = {
+                        lat: 23.09053,
+                        lng: 72.53
+                    };
+
+                    var grayStyles = [{
+                        featureType: "all",
+                        stylers: [{
+                            saturation: -90
+                        },
+                        {
+                            lightness: 50
+                        }
+                        ]
+                    },
+                    {
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#ccdee9'
+                        }]
+                    }
+                    ];
+
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: {
+                            lat: 23.09053,
+                            lng: 72.53
+                        }, // Set the center to the new location
+                        zoom: 9,
+                        styles: grayStyles,
+                        scrollwheel: false
+                    });
+                }
+            </script>
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap"></script>
+
+            <style>
+                .map-container {
+                    position: relative;
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 56.25%;
+                    /* 16:9 aspect ratio */
+                }
+
+                .map-container iframe {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
+            </style>
+        </section>
+
+        <div class="row">
+            <div class="col-12">
+                <h2 class="contact-title">Get in Touch</h2>
+            </div>
+            <div class="col-lg-8">
+                <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm"
+                    novalidate="novalidate">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'"
+                                    placeholder=" Enter Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control valid" name="name" id="name" type="text"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
+                                    placeholder="Enter your name">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control valid" name="email" id="email" type="email"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'"
+                                    placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input class="form-control" name="subject" id="subject" type="text"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'"
+                                    placeholder="Enter Subject">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3 offset-lg-1">
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-home"></i></span>
+                    <div class="media-body">
+                        <h3>Address:</h3>
+                        <p>352,353 A , Nr. Bhavik Publications, Opp. Bhagwat Vidyapith, S.G.Highway, Ahmedabad, Gujarat
+                            – 382481</p>
+
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                    <div class="media-body">
+                        <h3>+91 079 6604 6304</h3>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-email"></i></span>
+                    <div class="media-body">
+                        <h3>ieee.fbc@socet.edu.in</h3>
+                        <p>Send us your query anytime!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </section>
+        <!-- ================ contact section end ================= -->
+    </main>
+    <footer>
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <div class="footer-tittle">
+                                    <h4>About Us</h4>
+                                    <div class="footer-pera">
+                                        <p>Silver Oak University IEEE SB aims to give an interactive platform for
+                                            students to develop professional and technical abilities. Since the start,
+                                            it is successfully organizing various events with well defined subjects.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Contact Info</h4>
+                                <ul>
+                                    <li>
+                                        <p>Address : 352,353 A , Nr. Bhavik Publications, Opp. Bhagwat Vidyapith,
+                                            S.G.Highway, Ahmedabad, Gujarat – 382481</p>
+                                    </li>
+                                    <li><a href="#">Phone : +91 079 6604 6304</a></li>
+                                    <li><a href="#">Email : ieee.fbc@socet.edu.in</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Newsletter</h4>
+                                <div class="footer-pera footer-pera2">
+                                    <a href="http://ieee.socet.edu.in/wp-content/uploads/2024/05/NewsNest-2023.pdf"
+                                        target="_blank" rel="noopener noreferrer">NEWSNEST VOLUME - 2</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+
+                <!-- footer-bottom area -->
+                <div class="footer-bottom-area footer-bg">
+                    <div class="container">
+                        <div class="footer-border">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-xl-10 col-lg-8 ">
+                                    <div class="footer-copy-right">
+                                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                            Copyright &copy;
+                                            <script>document.write(new Date().getFullYear());</script> WIE ILS SILVER
+                                            OAK UNIVERSITY IEEE | All rights reserved <i class="fa fa-heart"
+                                                aria-hidden="true"></i> by
+                                            <a href="https://colorlib.com" target="_blank">IEEE SOU SB</a>
+                                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-4">
+                                    <div class="footer-social f-right">
+                                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://ieee.socet.edu.in/"><i class="fas fa-globe"></i></a>
+                                        <a href="#"><i class="fab fa-behance"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+
+    <!-- Nice-select, sticky -->
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
