@@ -6870,9 +6870,11 @@ del {
 }
 
 .padit {
-    padding: 10px;
+    padding: 8px;
 }
-
+.padit a{
+    font-size: 12px;
+}
 #ieee-logo-from-website {
     padding-top: 9px;
     height: 35px;
