@@ -6877,9 +6877,12 @@ del {
     padding: 6px;
     border-radius: 50px;
 } */
-.padit a{
-    font-size: 12px;
+@media (max-width: 575px) {
+    .padit a{
+        font-size: 12px;
+    }
 }
+
 #ieee-logo-from-website {
     padding-top: 9px;
     height: 35px;
