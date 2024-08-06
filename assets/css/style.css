@@ -2750,25 +2750,21 @@ hr {
 .slider-area2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero/About_Us_WIE_ILS_Website.jpg);
     background-repeat: no-repeat;
-    background-position:center center;
-    background-size:cover;
+    background-position: center center;
+    background-size: cover;
     position: relative;
 }
 
 .slider-area {
     margin-top: -1px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero/Main_WIE_ILS_Website.jpg);
-    /* background-image: url(../img/hero/Main_WIE_ILS_Website.jpg); */
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-    position: relative;
-
+    background-size: cover
 }
 
 .slider-area .hero__caption {
-    overflow: hidden;
-
+    overflow: hidden
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -2824,7 +2820,6 @@ hr {
     font-size: 65px;
     font-weight: 800;
     margin-bottom: 14px;
-
     color: #fff;
     line-height: 1.2;
     margin-bottom: 57px
@@ -2834,7 +2829,6 @@ hr {
     .slider-area .hero__caption h1 {
         font-size: 70px;
         line-height: 1.2
-        
     }
 }
 
@@ -3755,7 +3749,7 @@ hr {
 }
 
 .footer-area {
-    background: #7f2c82;
+    background: #742F8A;
 }
 
 .footer-area .footer-social2 a:hover {
@@ -3868,7 +3862,8 @@ hr {
 }
 
 .footer-bottom-area {
-    background: #7f2c82;
+    background: #742F8A;
+    border: solid white 2px;
 }
 
 .footer-bottom-area .footer-border {
@@ -3880,7 +3875,7 @@ hr {
     font-weight: 300;
     font-size: 16px;
     line-height: 2;
-    margin-bottom: 12px
+    margin-bottom: 12px;
 }
 
 @media (max-width: 575px) {
@@ -3896,7 +3891,7 @@ hr {
 }
 
 .footer-bottom-area .footer-copy-right p i {
-    color: red
+    color: #742F8A
 }
 
 .footer-bottom-area .footer-copy-right p a {
@@ -3928,7 +3923,7 @@ hr {
 .footer-bottom-area .footer-social a {
     color: #fff;
     font-size: 14px;
-    padding-left: 25px
+    padding-left: 25px;
 }
 
 .footer-bottom-area .footer-social a i {
@@ -6072,7 +6067,7 @@ del {
 .progress-table .table-head .country,
 .progress-table .table-head .visit,
 .progress-table .table-head .percentage {
-    color: #742F8A ;
+    color: #742F8A;
     line-height: 40px;
     text-transform: uppercase;
     font-weight: 500
@@ -6864,34 +6859,34 @@ del {
 
 
 /*---header three rows divison ---*/
-.headerno1{
+.headerno1 {
     display: flex;
     justify-content: space-around;
     justify-items: center;
     padding: 3px;
-    background-color: rgba(127,44,130,.1);
-    box-shadow: inset 0 -1px 0 0 #7f2c82;
+    background-color: #742F8A;
     color: white;
     width: 100%;
 
 }
 
-.padit{
+.padit {
     padding: 8px;
 }
-.padit li a{
+.padit li a {
     border: solid #7f2c82 1px;
     padding: 6px;
     border-radius: 35px;
 }
-.padit a{
-    font-weight: 700;
-    color: #069;
-    font-size: 13px;
-    color: #7f2c82;
-    border-right: 1px solid rgba(0, 102, 153, .2);
-    padding: 0 13px;
-
+/* .padit li a{
+    border: solid white 1.49px;
+    padding: 6px;
+    border-radius: 50px;
+} */
+@media (max-width: 575px) {
+    .padit a{
+        font-size: 12px;
+    }
 }
 
 #ieee-logo-from-website {
@@ -6900,33 +6895,61 @@ del {
     width: auto;
 }
 
-.nav2forimages{
+.nav2forimages {
     background-color: #ffffff;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: 12px;
-    background-image: url(/assets/img/hero/WIE\ ILS.jpg) url(/assets/img/hero/WIE\ ILS.jpg);
+    background-image: url(/assets/img/hero/WIEILS.jpg), url(/assets/img/hero/WIEILS.jpg);
     background-position: right bottom, left top;
-    background-repeat:no-repeat, repeat;
-    background-size: cover; 
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+
 }
 
-.im2{
+.im2 {
     display: flex;
     padding: 0;
-    justify-items: legacy;
-    background-image: url("");
-
+    justify-content: center;
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.nav-manus{
+.nav2forimages {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+.nav-manus {
     display: flex;
     justify-content: space-between;
     text-decoration: none;
     color: black;
+
+
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
+}
+
+.paditmorehe {
+    padding: 15px;
+}
+
+.paditmorehe:hover {
+    border-bottom: white solid 2px;
+
+
 }
