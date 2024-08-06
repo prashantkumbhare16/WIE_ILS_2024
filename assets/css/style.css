@@ -6883,6 +6883,15 @@ del {
     padding: 6px;
     border-radius: 50px;
 } */
+.padit a{
+    font-weight: 700;
+    color: #069;
+    font-size: 13px;
+    color: #7f2c82;
+    border-right: 1px solid rgba(0, 102, 153, .2);
+    padding: 0 13px;
+}
+
 @media (max-width: 575px) {
     .padit a{
         font-size: 12px;
